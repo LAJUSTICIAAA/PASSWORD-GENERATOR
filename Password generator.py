@@ -12,7 +12,7 @@ def generar_contraseña(longitud=12):
     # Combino todos los carácteres 
     todos_los_caracteres = mayusculas + minusculas + numeros + especiales
 
-    # Generar una contraseña que contenga al menos un carácter de cada tipo
+    # Hago que el resultado tenga al menos uno de cada uno 
     contraseña = [
         random.choice(mayusculas),
         random.choice(minusculas),
@@ -20,14 +20,14 @@ def generar_contraseña(longitud=12):
         random.choice(especiales),
     ]
 
-    # Completar la contraseña hasta la longitud deseada
+    # Completo la contraseña hasta la longitud deseada
     contraseña += random.choices(todos_los_caracteres, k=longitud - 4)
 
-    # Mezclar los caracteres de la contraseña para evitar patrones predecibles
+    # Mezclo los caracteres para evitar claves repetidas
     random.shuffle(contraseña)
 
-    # Convertir la lista en una cadena
+    # Convierto la lista en una cadena 
     return ''.join(contraseña)
 
-# Generar una contraseña de longitud 12
+# EN mi caso hago que la contraseña tenga una  de longitud 12
 print(generar_contraseña())
