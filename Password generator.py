@@ -20,7 +20,7 @@ def generar_contraseña(longitud, palabra, incluir_simbolos, incluir_numeros, ca
     return ''.join(contraseña)
 
 # Preguntas clave para el usuario
-print("Bienvenido a la generación de contraseñas.")
+print("Bienvenido al generador de contraseñas de Justin.")
 longitud = int(input("¿De cuántos caracteres quieres tu contraseña? (mínimo 8): "))
 palabra = input("Ingresa una palabra o caracteres que quieras incluir en la contraseña: ")
 
